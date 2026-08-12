@@ -645,10 +645,6 @@ a:focus-visible {
   animation: carousel-scroll 22s linear infinite;
 }
 
-.carousel-track:hover {
-  animation-play-state: paused;
-}
-
 @media (prefers-reduced-motion: reduce) {
   .carousel-track { animation: none; }
 }
@@ -664,6 +660,19 @@ a:focus-visible {
   text-decoration: none;
   transition: opacity 250ms ease, transform 250ms ease;
   height: 200px;
+}
+
+.carousel-logo {
+  filter: grayscale(1) brightness(1.5);
+  transition: filter 300ms ease;
+}
+
+.carousel-logo--dark {
+  filter: grayscale(1) invert(1) brightness(0.7);
+}
+
+.carousel-slide:hover .carousel-logo {
+  filter: none;
 }
 
 .carousel-slide:hover {

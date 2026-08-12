@@ -3,12 +3,12 @@
 import Image from "next/image";
 
 const SOCIOS = [
-  { nombre: "EndPoint",         logo: "/empresas/endpoint.png",        url: "https://endpointsecurity.com.ar" },
-  { nombre: "Zenith",           logo: "/empresas/zenith2.png",         url: "https://zenith.com.ar" },
-  { nombre: "ToolsDevs",        logo: "/empresas/toolsdevs.png",       url: "https://toolsdevs.com.ar" },
-  { nombre: "JCA Seguridad",    logo: "/empresas/jca-seguridad.png",   url: "https://centurion.com.ar" },
-  { nombre: "TorresCampi Soft", logo: "/empresas/torrescampisoft.png", url: "https://torrescampisoft.com" },
-  { nombre: "Tecno Yangu",      logo: "/empresas/tecno-yangu.png",     url: "https://instagram.com/tecno_yangu" },
+  { nombre: "EndPoint",         logo: "/empresas/endpoint.png",        url: "https://endpointsecurity.com.ar",  darkLogo: false },
+  { nombre: "Zenith",           logo: "/empresas/zenith3.png",         url: "https://zenith.com.ar",            darkLogo: true  },
+  { nombre: "ToolsDevs",        logo: "/empresas/toolsdevs.png",       url: "https://toolsdevs.com.ar",         darkLogo: false },
+  { nombre: "JCA Seguridad",    logo: "/empresas/jca-seguridad.png",   url: "https://centurion.com.ar",         darkLogo: false },
+  { nombre: "TorresCampi Soft", logo: "/empresas/torrescampisoft.png", url: "https://torrescampisoft.com",      darkLogo: false },
+  { nombre: "Tecno Yangu",      logo: "/empresas/tecno-yangu.png",     url: "https://instagram.com/tecno_yangu",darkLogo: false },
 ];
 
 function LogoPlaceholder({ nombre }: { nombre: string }) {
@@ -41,6 +41,7 @@ function SocioSlide({ socio }: { socio: typeof SOCIOS[number] }) {
           alt={socio.nombre}
           width={300}
           height={150}
+          className={socio.darkLogo ? "carousel-logo carousel-logo--dark" : "carousel-logo"}
           style={{ objectFit: "contain", maxHeight: 150, width: "auto" }}
         />
       ) : (
