@@ -102,7 +102,7 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="contact-form">
+    <div className="contact-form contact-form--flat">
       <div className="cf-header">
         <h2>Envianos tu mensaje</h2>
         <p>Los campos marcados con <span className="cf-required-mark">*</span> son obligatorios.</p>

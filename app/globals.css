@@ -1059,50 +1059,46 @@ a:focus-visible {
   padding-block: 8rem 4rem;
   border-bottom: 1px solid var(--border);
 }
-
 .contacto-hero h1 { margin-bottom: 1rem; }
-.contacto-hero p { color: var(--text-muted); margin: 0; }
+.contacto-hero p  { color: var(--text-muted); margin: 0; max-width: 54ch; }
 
-.contacto-layout {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 3rem;
-  align-items: start;
+.contacto-wrapper {
+  max-width: 780px;
+  margin-inline: auto;
 }
 
-@media (min-width: 900px) {
-  .contacto-layout {
-    grid-template-columns: 1fr 1.4fr;
-  }
-}
-
-.contacto-info h2 {
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
-}
-
-.contact-item {
+/* Info row — horizontal */
+.contacto-info-row {
   display: flex;
-  gap: 1rem;
+  flex-wrap: wrap;
+  gap: 0;
   align-items: flex-start;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0;
 }
 
-.contact-item__icon {
-  width: 42px;
-  height: 42px;
-  border-radius: var(--radius-md);
-  background-color: var(--accent-glow);
-  border: 1px solid rgba(0, 212, 255, 0.2);
+.cinfo-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  flex: 1 1 180px;
+  padding: 0 1.5rem 0 0;
+}
+
+.cinfo-item:first-child { padding-left: 0; }
+
+.cinfo-icon {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
+  margin-top: 0.1rem;
 }
 
-.contact-item__icon svg {
-  width: 18px;
-  height: 18px;
+.cinfo-icon svg {
+  width: 20px;
+  height: 20px;
   stroke: var(--accent);
   stroke-width: 1.8;
   fill: none;
@@ -1110,53 +1106,52 @@ a:focus-visible {
   stroke-linejoin: round;
 }
 
-.contact-item__text strong {
+.cinfo-item strong {
   display: block;
   font-family: var(--font-display);
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--text-faint);
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.2rem;
 }
 
-.contact-item__text span,
-.contact-item__text a {
-  font-size: 0.9rem;
+.cinfo-item span,
+.cinfo-item a {
+  font-size: 0.875rem;
   color: var(--text-muted);
+  text-decoration: none;
+  line-height: 1.5;
+}
+.cinfo-item a:hover { color: var(--accent); }
+
+.cinfo-divider {
+  width: 1px;
+  align-self: stretch;
+  background-color: var(--border);
+  margin: 0 1.5rem 0 0;
+  flex-shrink: 0;
 }
 
-.contact-item__text a:hover { color: var(--accent); }
-
-.contacto-socials {
+.cinfo-socials {
   display: flex;
-  gap: 0.75rem;
+  gap: 1rem;
+  margin-top: 0.1rem;
 }
 
-.social-btn {
+.cinfo-socials a {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  font-family: var(--font-display);
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: var(--text-muted);
-  background-color: var(--surface-2);
-  border: 1px solid var(--border);
-  padding: 0.5rem 1rem;
-  border-radius: var(--radius-md);
+  gap: 0.4rem;
+  font-size: 0.85rem !important;
+  color: var(--text-muted) !important;
   text-decoration: none;
-  transition: color 200ms ease, border-color 200ms ease, background-color 200ms ease;
+  transition: color 200ms ease;
 }
+.cinfo-socials a:hover { color: var(--accent) !important; }
 
-.social-btn:hover {
-  color: var(--accent);
-  border-color: var(--accent);
-  background-color: var(--accent-glow);
-}
-
-.social-btn svg {
+.cinfo-socials svg {
   width: 15px;
   height: 15px;
   stroke: currentColor;
@@ -1164,6 +1159,20 @@ a:focus-visible {
   fill: none;
   stroke-linecap: round;
   stroke-linejoin: round;
+}
+
+.contacto-sep {
+  height: 1px;
+  background-color: var(--border);
+  margin-block: 2.5rem;
+}
+
+/* Form sin recuadro */
+.contact-form--flat {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
 }
 
 /* ============================================================
