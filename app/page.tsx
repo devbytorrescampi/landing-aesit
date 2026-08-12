@@ -90,11 +90,6 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="hero__stats" aria-label="Números de AESIT">
-            <AnimatedStat value={6} suffix="" label="Empresas socias" />
-            <AnimatedStat value={2024} suffix="" label="Año de fundación" />
-            <AnimatedStat value={1} suffix="ª" label="Asociación de ciberseguridad del NOA" />
-          </div>
         </div>
       </section>
 
