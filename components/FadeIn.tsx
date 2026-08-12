@@ -1,18 +1,20 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef, ElementType } from "react";
 
 interface FadeInProps {
   children: React.ReactNode;
   className?: string;
   delay?: number;
-  as?: keyof JSX.IntrinsicElements;
+  style?: React.CSSProperties;
+  as?: ElementType;
 }
 
 export default function FadeIn({
   children,
   className = "",
   delay = 0,
+  style,
   as: Tag = "div",
 }: FadeInProps) {
   const ref = useRef<HTMLElement>(null);
@@ -27,7 +29,7 @@ export default function FadeIn({
     }
 
     if (delay) {
-      (el as HTMLElement).style.transitionDelay = `${delay}ms`;
+      el.style.transitionDelay = `${delay}ms`;
     }
 
     const observer = new IntersectionObserver(
@@ -44,6 +46,10 @@ export default function FadeIn({
     return () => observer.disconnect();
   }, [delay]);
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  return <Tag ref={ref as any} className={`fade-in ${className}`}>{children}</Tag>;
+  const Component = Tag as React.ElementType;
+  return (
+    <Component ref={ref} className={`fade-in ${className}`} style={style}>
+      {children}
+    </Component>
+  );
 }
