@@ -6,7 +6,7 @@ const SOCIOS = [
   { nombre: "EndPoint",         logo: "/empresas/endpoint.png",        url: "https://endpoint.com.ar" },
   { nombre: "Zenith",           logo: null,                            url: "https://zenith.com.ar" },
   { nombre: "ToolsDevs",        logo: "/empresas/toolsdevs.png",       url: "https://toolsdevs.com" },
-  { nombre: "JCA Seguridad",    logo: null,                            url: "https://jcaseguridad.com.ar" },
+  { nombre: "JCA Seguridad",    logo: "/empresas/jca-seguridad.png",   url: "https://jcaseguridad.com.ar" },
   { nombre: "TorresCampi Soft", logo: "/empresas/torrescampisoft.png", url: "https://torrescampisoft.com" },
   { nombre: "Tecno Yangu",      logo: "/empresas/tecno-yangu.png",     url: "https://tecnoyangu.com.ar" },
 ];
