@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState, useCallback } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -29,45 +30,26 @@ export default function Navbar() {
     <>
       <header className={`navbar${scrolled ? " scrolled" : ""}`} role="banner">
         <div className="container navbar__inner">
-          <Link href="/" className="navbar__logo" aria-label="AESIT inicio">
-            {/* Logo placeholder: reemplazar con <Image src="/logo.png" … /> cuando esté disponible */}
-            <div
-              aria-hidden="true"
-              style={{
-                width: 36,
-                height: 36,
-                borderRadius: 6,
-                backgroundColor: "var(--accent-glow)",
-                border: "1px solid rgba(0,212,255,0.4)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                flexShrink: 0,
-              }}
-            >
-              <svg
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="var(--accent)"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" />
-              </svg>
-            </div>
-            <span className="navbar__logo-text">
-              AE<span>SIT</span>
-            </span>
+          <Link href="/" className="navbar__logo" aria-label="AESIT inicio" style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+            <Image
+              src="/logo.png"
+              alt="AESIT logo"
+              width={66}
+              height={66}
+              style={{ objectFit: "contain", height: 66, width: "auto" }}
+              priority
+            />
+            <Image
+              src="/nombre.png"
+              alt="AESIT"
+              width={135}
+              height={45}
+              style={{ objectFit: "contain", height: 45, width: "auto", filter: "brightness(0) invert(1)" }}
+              priority
+            />
           </Link>
 
           <nav className="navbar__nav" aria-label="Navegación principal">
-            <Link href="/" className={`nav-link${isActive("/") ? " active" : ""}`}>
-              Inicio
-            </Link>
             <Link href="/socios" className={`nav-link${isActive("/socios") ? " active" : ""}`}>
               Socios
             </Link>
@@ -94,9 +76,6 @@ export default function Navbar() {
       </header>
 
       <nav className={`navbar__mobile${open ? " open" : ""}`} aria-label="Menú mobile">
-        <Link href="/" className={`nav-link${isActive("/") ? " active" : ""}`}>
-          Inicio
-        </Link>
         <Link href="/socios" className={`nav-link${isActive("/socios") ? " active" : ""}`}>
           Socios
         </Link>

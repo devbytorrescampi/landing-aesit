@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Footer() {
   const year = new Date().getFullYear();
 
@@ -8,52 +10,21 @@ export default function Footer() {
 
           {/* Brand */}
           <div className="footer__brand">
-            {/* Logo placeholder — reemplazar con <Image src="/logo.png" …> */}
-            <div
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "0.6rem",
-                marginBottom: "0.75rem",
-              }}
-            >
-              <div
-                style={{
-                  width: 32,
-                  height: 32,
-                  borderRadius: 6,
-                  backgroundColor: "var(--accent-glow)",
-                  border: "1px solid rgba(0,212,255,0.3)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-                aria-hidden="true"
-              >
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="var(--accent)"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  aria-hidden="true"
-                >
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" />
-                </svg>
-              </div>
-              <span
-                style={{
-                  fontFamily: "var(--font-display, Space Grotesk, sans-serif)",
-                  fontWeight: 700,
-                  fontSize: "1rem",
-                  color: "var(--white)",
-                }}
-              >
-                AE<span style={{ color: "var(--accent)" }}>SIT</span>
-              </span>
+            <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.75rem" }}>
+              <Image
+                src="/logo.png"
+                alt="AESIT logo"
+                width={44}
+                height={44}
+                style={{ objectFit: "contain", height: 44, width: "auto" }}
+              />
+              <Image
+                src="/nombre.png"
+                alt="AESIT"
+                width={90}
+                height={30}
+                style={{ objectFit: "contain", height: 30, width: "auto", filter: "brightness(0) invert(1)" }}
+              />
             </div>
             <p>
               Agrupación de Empresas de Seguridad de la Información Tucumán.

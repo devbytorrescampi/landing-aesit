@@ -103,64 +103,70 @@ export default function HomePage() {
       ==================================================== */}
       <section className="section section--alt" aria-labelledby="mision-titulo">
         <div className="container">
+
           <FadeIn className="section-header">
             <span className="eyebrow">Quiénes somos</span>
             <h2 id="mision-titulo">
-              Nacimos para dar forma<br />
-              al ecosistema de seguridad digital
+              Una asociación creada para<br />
+              proteger el ecosistema digital del NOA
             </h2>
             <p>
-              Impulsada por el IDEP Tucumán y conformada por referentes del sector
-              privado, AESIT articula empresas, instituciones y profesionales que
-              trabajan a diario para que organizaciones y ciudadanos estén más
-              seguros en el entorno digital.
+              Impulsada por el IDEP Tucumán y conformada por referentes del sector privado,
+              AESIT articula empresas, instituciones y profesionales comprometidos con la
+              seguridad digital de la región.
             </p>
           </FadeIn>
 
-          <div className="mission-grid">
-            <FadeIn delay={0} className="mission-card">
-              <div className="mission-card__icon"><IconTarget /></div>
-              <h3>Misión</h3>
+          {/* Misión + Visión — dos columnas protagonistas */}
+          <div className="mv-grid">
+            <FadeIn delay={0} className="mv-card mv-card--mission">
+              <div className="mv-card__label">
+                <div className="mv-card__icon"><IconTarget /></div>
+                <span>Misión</span>
+              </div>
+              <h3>
+                Nuclear el sector privado para fortalecer la ciberseguridad regional
+              </h3>
               <p>
-                Nuclear a las empresas tucumanas del sector de seguridad de la
-                información para fortalecer la conciencia digital, promover el
-                desarrollo del sector y articular iniciativas de prevención del
-                cibercrimen en la región NOA.
+                Reunimos a las empresas tucumanas de seguridad de la información para
+                elevar la conciencia digital, promover el crecimiento del sector y
+                articular iniciativas concretas de prevención del cibercrimen en todo
+                el NOA.
               </p>
             </FadeIn>
 
-            <FadeIn delay={80} className="mission-card">
-              <div className="mission-card__icon"><IconEye /></div>
-              <h3>Visión</h3>
+            <FadeIn delay={100} className="mv-card mv-card--vision">
+              <div className="mv-card__label">
+                <div className="mv-card__icon"><IconEye /></div>
+                <span>Visión</span>
+              </div>
+              <h3>
+                Ser el referente indiscutido de ciberseguridad en el norte argentino
+              </h3>
               <p>
-                Ser el referente regional en ciberseguridad del NOA: un ecosistema
-                donde la colaboración público-privada impulse la innovación, la
-                formación y la soberanía digital como pilares del crecimiento de
-                Tucumán.
-              </p>
-            </FadeIn>
-
-            <FadeIn delay={160} className="mission-card">
-              <div className="mission-card__icon"><IconHeart /></div>
-              <h3>Valores</h3>
-              <p>
-                Colaboración, transparencia, excelencia técnica, compromiso con la
-                comunidad y ética profesional son los principios que guían el
-                accionar de cada empresa que integra nuestra asociación.
-              </p>
-            </FadeIn>
-
-            <FadeIn delay={240} className="mission-card">
-              <div className="mission-card__icon"><IconShield /></div>
-              <h3>Compromiso</h3>
-              <p>
-                AESIT trabaja en alineación con las políticas de Economía del
-                Conocimiento de la provincia, contribuyendo activamente a
-                posicionar a Tucumán como polo tecnológico de seguridad digital
-                en Argentina.
+                Construir un ecosistema donde la colaboración público-privada impulse
+                la innovación, la formación de talento local y la soberanía digital
+                como pilares del desarrollo de Tucumán y la región.
               </p>
             </FadeIn>
           </div>
+
+          {/* Valores — pilares horizontales */}
+          <div className="valores-strip">
+            {[
+              { icon: <IconHeart />, label: "Colaboración" },
+              { icon: <IconShield />, label: "Ética profesional" },
+              { icon: <IconTarget />, label: "Excelencia técnica" },
+              { icon: <IconEye />, label: "Transparencia" },
+              { icon: <IconHeart />, label: "Compromiso social" },
+            ].map((v, i) => (
+              <FadeIn key={v.label} delay={i * 60} className="valor-pill">
+                <span className="valor-pill__icon" aria-hidden="true">{v.icon}</span>
+                <span>{v.label}</span>
+              </FadeIn>
+            ))}
+          </div>
+
         </div>
       </section>
 
