@@ -1429,6 +1429,11 @@ a:focus-visible {
     height: 56px;
   }
 
+  /* Force-hide CTA button — .btn sets display:inline-flex which can win specificity */
+  .nav-cta {
+    display: none !important;
+  }
+
   /* Mobile drawer top offset matches reduced navbar height */
   .navbar__mobile {
     top: 56px;
