@@ -8,7 +8,7 @@ const SOCIOS = [
   { nombre: "ToolsDevs",        logo: "/empresas/toolsdevs.png",       url: "https://toolsdevs.com" },
   { nombre: "JCA Seguridad",    logo: null,                            url: "https://jcaseguridad.com.ar" },
   { nombre: "TorresCampi Soft", logo: "/empresas/torrescampisoft.png", url: "https://torrescampisoft.com" },
-  { nombre: "Tecno Yangu",      logo: null,                            url: "https://tecnoyangu.com.ar" },
+  { nombre: "Tecno Yangu",      logo: "/empresas/tecno-yangu.png",     url: "https://tecnoyangu.com.ar" },
 ];
 
 function LogoPlaceholder({ nombre }: { nombre: string }) {
