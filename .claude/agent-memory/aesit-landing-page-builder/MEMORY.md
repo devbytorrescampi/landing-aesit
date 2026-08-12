@@ -1,0 +1,1 @@
+- [Responsive overhaul](project_responsive.md) — Media queries en globals.css (767/480/360px) + clases logo Navbar; no crear archivos nuevos

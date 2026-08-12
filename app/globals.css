@@ -710,7 +710,7 @@ a:focus-visible {
    ============================================================ */
 .activities-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
   gap: 1.25rem;
 }
 
@@ -974,7 +974,7 @@ a:focus-visible {
 
 .socios-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(260px, 100%), 1fr));
   gap: 1.25rem;
 }
 
@@ -1413,6 +1413,215 @@ a:focus-visible {
   width: 24px; height: 24px;
   stroke: var(--success); stroke-width: 2.5;
   fill: none; stroke-linecap: round; stroke-linejoin: round;
+}
+
+/* ============================================================
+   RESPONSIVE — Mobile-first corrections
+   Breakpoints: mobile ≤480px | tablet 481px–767px | desktop ≥768px
+   ============================================================ */
+
+/* ── Tablet (481px–767px) ────────────────────────────────── */
+@media (max-width: 767px) {
+
+  /* Navbar: 2-column grid — logo left, toggle right; center column removed */
+  .navbar__inner {
+    grid-template-columns: 1fr auto;
+    height: 56px;
+  }
+
+  /* Mobile drawer top offset matches reduced navbar height */
+  .navbar__mobile {
+    top: 56px;
+  }
+
+  /* Hero: reduce excess vertical padding */
+  .hero {
+    padding-top: 56px;
+  }
+
+  .hero__content {
+    padding-block: 2.5rem 2rem;
+  }
+
+  /* Hero stats: tighter gap on small screens */
+  .hero__stats {
+    gap: 1.25rem;
+  }
+
+  /* mv-card: reduce padding */
+  .mv-card {
+    padding: 1.75rem;
+  }
+
+  /* Carousel: slightly reduced on tablet */
+  .carousel-slide {
+    height: 160px;
+    padding: 0.5rem 1.25rem;
+  }
+
+  .carousel-slide img {
+    max-height: 110px !important;
+  }
+
+  .carousel-placeholder {
+    width: 110px;
+    height: 110px;
+  }
+
+  /* Socios / Contacto hero: reduce top padding on tablet */
+  .socios-hero,
+  .contacto-hero {
+    padding-block: 6rem 3rem;
+  }
+
+  /* Footer: already 1-col below 640px, no extra changes needed */
+}
+
+/* ── Mobile (≤480px) ─────────────────────────────────────── */
+@media (max-width: 480px) {
+
+  /* Navbar logo sizes */
+  .navbar__logo-img--icon {
+    height: 40px !important;
+    width: auto !important;
+  }
+
+  .navbar__logo-img--name {
+    height: 28px !important;
+    width: auto !important;
+  }
+
+  /* Hero: minimal padding */
+  .hero__content {
+    padding-block: 2rem 1.5rem;
+  }
+
+  /* Hero actions: stack buttons full-width */
+  .hero__actions {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Hero stats: wrap nicely */
+  .hero__stats {
+    gap: 1rem;
+  }
+
+  .hero__stat-value {
+    font-size: 1.6rem;
+  }
+
+  /* Activities grid: force single column on very small screens */
+  .activities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* mv-card: minimal padding */
+  .mv-card {
+    padding: 1.5rem;
+  }
+
+  /* benefits-cta-box: reduce padding */
+  .benefits-cta-box {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .accent-number {
+    font-size: 3.5rem;
+  }
+
+  /* Carousel: reduce slide height and logo size */
+  .carousel-slide {
+    height: 130px;
+    padding: 0.5rem 1rem;
+  }
+
+  .carousel-slide img,
+  .carousel-slide [style*="maxHeight"] {
+    max-height: 80px !important;
+  }
+
+  .carousel-placeholder {
+    width: 90px;
+    height: 90px;
+  }
+
+  .carousel-placeholder span {
+    font-size: 1.8rem;
+  }
+
+  /* Socios hero & Contacto hero: reduce top padding */
+  .socios-hero,
+  .contacto-hero {
+    padding-block: 5rem 2.5rem;
+  }
+
+  /* Contacto layout: verified already collapses to 1 col at 900px;
+     ensure info sidebar gets sensible spacing */
+  .contacto-info {
+    margin-bottom: 0;
+  }
+
+  /* Contact form: reduce padding */
+  .contact-form {
+    padding: 1.5rem 1.25rem;
+  }
+
+  /* Footer: already 1-col below 640px via existing rule — just tighten spacing */
+  .footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .footer__legal {
+    gap: 1rem;
+  }
+
+  /* CTA section buttons: stack and full-width */
+  .cta-section__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cta-section__actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Section header: tighter bottom margin */
+  .section-header {
+    margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+  }
+}
+
+/* ── Very small (≤360px) — safety net ───────────────────── */
+@media (max-width: 360px) {
+
+  /* Navbar: hide the name image on very small screens, keep only icon */
+  .navbar__logo-img--name {
+    display: none;
+  }
+
+  /* Ensure container never clips content */
+  .container {
+    padding-inline: 0.875rem;
+  }
+
+  /* Reduce section padding */
+  .section {
+    padding-block: clamp(2.5rem, 6vw, 4rem);
+  }
+
+  /* Benefits gap reduction */
+  .benefits-layout {
+    gap: 2.5rem;
+  }
 }
 
 /* ============================================================

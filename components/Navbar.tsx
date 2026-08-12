@@ -36,6 +36,7 @@ export default function Navbar() {
               alt="AESIT logo"
               width={66}
               height={66}
+              className="navbar__logo-img--icon"
               style={{ objectFit: "contain", height: 66, width: "auto" }}
               priority
             />
@@ -44,6 +45,7 @@ export default function Navbar() {
               alt="AESIT"
               width={135}
               height={45}
+              className="navbar__logo-img--name"
               style={{ objectFit: "contain", height: 45, width: "auto", filter: "brightness(0) invert(1)" }}
               priority
             />
