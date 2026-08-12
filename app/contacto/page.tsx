@@ -34,7 +34,6 @@ export default function ContactoPage() {
             <aside className="contacto-info" aria-label="Información de contacto">
               <FadeIn>
                 <h2>Información de contacto</h2>
-                <span className="accent-line" />
               </FadeIn>
 
               <FadeIn delay={60} className="contact-item">
