@@ -91,7 +91,7 @@ export default function HomePage() {
           </div>
 
           <div className="hero__stats" aria-label="Números de AESIT">
-            <AnimatedStat value={13} suffix="+" label="Empresas socias" />
+            <AnimatedStat value={6} suffix="" label="Empresas socias" />
             <AnimatedStat value={2024} suffix="" label="Año de fundación" />
             <AnimatedStat value={1} suffix="ª" label="Asociación de ciberseguridad del NOA" />
           </div>
@@ -278,7 +278,7 @@ export default function HomePage() {
             </div>
 
             <FadeIn className="benefits-cta-box">
-              <span className="accent-number" aria-label="13 empresas socias">13</span>
+              <span className="accent-number" aria-label="6 empresas socias">6</span>
               <p>
                 empresas ya forman parte de la primera asociación de ciberseguridad
                 del NOA
