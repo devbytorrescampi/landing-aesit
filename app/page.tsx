@@ -61,8 +61,6 @@ export default function HomePage() {
       ==================================================== */}
       <section className="hero" aria-label="Presentación de AESIT">
         <HeroCanvas />
-        {/* Cover decorativo — reemplazar con background-image real cuando esté disponible */}
-        <div className="hero__cover" aria-hidden="true" />
 
         <div className="container">
           <div className="hero__content">
