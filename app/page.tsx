@@ -269,28 +269,6 @@ export default function HomePage() {
                 ))}
               </ul>
             </div>
-
-            <FadeIn className="benefits-cta-box">
-              <span className="accent-number" aria-label="6 empresas socias">6</span>
-              <p>
-                empresas ya forman parte de la primera asociación de ciberseguridad
-                del NOA
-              </p>
-              <Link
-                href="/socios"
-                className="btn btn--ghost"
-                style={{ width: "100%", justifyContent: "center" }}
-              >
-                Ver empresas socias
-              </Link>
-              <Link
-                href="/contacto"
-                className="btn btn--primary"
-                style={{ width: "100%", justifyContent: "center" }}
-              >
-                Quiero sumarme
-              </Link>
-            </FadeIn>
           </div>
         </div>
       </section>
