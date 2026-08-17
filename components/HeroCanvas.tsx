@@ -35,7 +35,8 @@ export default function HeroCanvas() {
     let W = 0;
     let H = 0;
     let nodes: Node[] = [];
-    let animId: number;
+    let animId: number | null = null;
+    let visible = true;
     const mouse: { x: number | null; y: number | null } = { x: null, y: null };
 
     function handlePointerMove(e: PointerEvent) {
@@ -136,19 +137,32 @@ export default function HeroCanvas() {
         }
       }
 
-      animId = requestAnimationFrame(draw);
+      if (visible) animId = requestAnimationFrame(draw);
     }
 
     const ro = new ResizeObserver(resize);
     ro.observe(canvas);
+
+    const io = new IntersectionObserver(([entry]) => {
+      visible = entry.isIntersecting;
+      if (visible && animId === null) {
+        animId = requestAnimationFrame(draw);
+      } else if (!visible && animId !== null) {
+        cancelAnimationFrame(animId);
+        animId = null;
+      }
+    });
+    io.observe(canvas);
+
     document.addEventListener("pointermove", handlePointerMove);
     document.addEventListener("mouseleave", handlePointerLeave);
     resize();
     draw();
 
     return () => {
-      cancelAnimationFrame(animId);
+      if (animId !== null) cancelAnimationFrame(animId);
       ro.disconnect();
+      io.disconnect();
       document.removeEventListener("pointermove", handlePointerMove);
       document.removeEventListener("mouseleave", handlePointerLeave);
     };
