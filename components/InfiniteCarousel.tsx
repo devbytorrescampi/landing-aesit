@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const SOCIOS = [
   { nombre: "EndPoint",         logo: "/empresas/endpoint.png",        url: "https://endpointsecurity.com.ar",  darkLogo: false },
-  { nombre: "Zenith",           logo: "/empresas/zenith3.png",         url: "https://zenith.com.ar",            darkLogo: true  },
+  { nombre: "Zenith Agency",    logo: "/empresas/zenith3.png",         url: "https://www.zenithagency.com.ar/", darkLogo: true  },
   { nombre: "ToolsDevs",        logo: "/empresas/toolsdevs.png",       url: "https://toolsdevs.com.ar",         darkLogo: false },
   { nombre: "JCA Seguridad",    logo: "/empresas/jca-seguridad.png",   url: "https://centurion.com.ar",         darkLogo: false },
   { nombre: "TorresCampi Soft", logo: "/empresas/torrescampisoft.png", url: "https://torrescampisoft.com",      darkLogo: false },
