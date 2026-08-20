@@ -819,14 +819,14 @@ a:focus-visible {
 .footer {
   background-color: var(--surface);
   border-top: 1px solid var(--border);
-  padding-block: 3rem;
+  padding-block: 1.5rem;
 }
 
 .footer__grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2.5rem;
-  margin-bottom: 3rem;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 @media (min-width: 640px) {
@@ -846,7 +846,7 @@ a:focus-visible {
   color: var(--text-muted);
   font-size: 0.875rem;
   max-width: 30ch;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.6rem;
 }
 
 .footer__socials {
@@ -890,7 +890,7 @@ a:focus-visible {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--text-faint);
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .footer__col ul {
@@ -899,7 +899,7 @@ a:focus-visible {
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
+  gap: 0.3rem;
 }
 
 .footer__col ul li a {
@@ -917,7 +917,7 @@ a:focus-visible {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 1rem;
-  padding-top: 1.75rem;
+  padding-top: 0.875rem;
   border-top: 1px solid var(--border);
 }
 
