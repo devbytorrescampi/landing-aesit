@@ -82,6 +82,24 @@ export default function SociosPage() {
         </div>
       </section>
 
+      {/* Bloque Ente Cultural */}
+      <section className="section section--alt" aria-labelledby="ente-cultural-titulo">
+        <div className="container">
+          <FadeIn style={{ maxWidth: "62ch" }}>
+            <span className="eyebrow">Respaldo institucional</span>
+            <h2 id="ente-cultural-titulo" style={{ marginTop: "0.75rem", marginBottom: "1rem" }}>
+              Con el apoyo del Ente Cultural de Tucumán
+            </h2>
+            <p style={{ color: "var(--text-muted)" }}>
+              El Ente Cultural de Tucumán acompaña las actividades de
+              divulgación y formación de AESIT, sumándose junto a la Cámara
+              de Comercio como parte del respaldo institucional al sector
+              de ciberseguridad provincial.
+            </p>
+          </FadeIn>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="section section--alt" aria-label="Llamado a la acción">
         <div className="container">
