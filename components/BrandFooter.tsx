@@ -1,3 +1,5 @@
+"use client";
+
 type BrandFooterProps = {
   name?: string;
   url?: string;
