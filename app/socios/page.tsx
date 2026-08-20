@@ -42,16 +42,17 @@ export default function SociosPage() {
         </FadeIn>
       </section>
 
-      {/* Bloque IDEP */}
-      <section className="section" aria-labelledby="idep-titulo">
+      {/* Bloque Respaldo institucional */}
+      <section className="section" aria-labelledby="respaldo-titulo">
         <div className="container">
           <div className="idep-layout">
             <FadeIn>
               <span className="eyebrow">Respaldo institucional</span>
-              <h2 id="idep-titulo" style={{ marginTop: "0.75rem", marginBottom: "1rem" }}>
-                Impulsada por el IDEP Tucumán
+              <h2 id="respaldo-titulo" style={{ marginTop: "0.75rem", marginBottom: "1rem" }}>
+                Impulsada por el IDEP y el Ente Cultural de Tucumán
               </h2>
-              <p style={{ color: "var(--text-muted)", marginBottom: "1.75rem", maxWidth: "52ch" }}>
+
+              <p style={{ color: "var(--text-muted)", marginBottom: "1rem", maxWidth: "52ch" }}>
                 El Instituto de Desarrollo Productivo de Tucumán acompañó la creación
                 y presentación oficial de AESIT, reconociendo al sector de ciberseguridad
                 como pilar de la Economía del Conocimiento provincial.
@@ -61,8 +62,24 @@ export default function SociosPage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn--ghost"
+                style={{ marginBottom: "1.75rem" }}
               >
                 Conocer el IDEP
+              </a>
+
+              <p style={{ color: "var(--text-muted)", marginBottom: "1rem", maxWidth: "52ch" }}>
+                El Ente Cultural de Tucumán acompaña las actividades de
+                divulgación y formación de AESIT, sumándose junto a la Cámara
+                de Comercio como parte del respaldo institucional al sector
+                de ciberseguridad provincial.
+              </p>
+              <a
+                href="https://enteculturaltucuman.gob.ar"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn--ghost"
+              >
+                Conocer el Ente Cultural
               </a>
             </FadeIn>
 
@@ -79,24 +96,6 @@ export default function SociosPage() {
               </blockquote>
             </FadeIn>
           </div>
-        </div>
-      </section>
-
-      {/* Bloque Ente Cultural */}
-      <section className="section section--alt" aria-labelledby="ente-cultural-titulo">
-        <div className="container">
-          <FadeIn style={{ maxWidth: "62ch" }}>
-            <span className="eyebrow">Respaldo institucional</span>
-            <h2 id="ente-cultural-titulo" style={{ marginTop: "0.75rem", marginBottom: "1rem" }}>
-              Con el apoyo del Ente Cultural de Tucumán
-            </h2>
-            <p style={{ color: "var(--text-muted)" }}>
-              El Ente Cultural de Tucumán acompaña las actividades de
-              divulgación y formación de AESIT, sumándose junto a la Cámara
-              de Comercio como parte del respaldo institucional al sector
-              de ciberseguridad provincial.
-            </p>
-          </FadeIn>
         </div>
       </section>
 
