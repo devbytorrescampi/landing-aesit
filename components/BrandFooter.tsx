@@ -22,7 +22,7 @@ export default function BrandFooter({
   return (
     <footer
       style={{
-        maxWidth: "64rem",
+        maxWidth: "32rem",
         margin: "0 auto",
         padding: "0.375rem 1.5rem",
         display: "flex",
