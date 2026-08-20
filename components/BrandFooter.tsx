@@ -15,7 +15,7 @@ export default function BrandFooter({
   url = "https://torrescampisoft.com",
   instagram = "https://www.instagram.com/torrescampisoft",
   linkedin = "https://ar.linkedin.com/company/torrescampisoft",
-  primaryColor = "#16a34a",
+  primaryColor = "#e8edfb",
   mutedColor = "#6b7280",
   borderColor = "#e5e7eb",
 }: BrandFooterProps) {
@@ -24,7 +24,7 @@ export default function BrandFooter({
       style={{
         maxWidth: "64rem",
         margin: "0 auto",
-        padding: "0.625rem 1.5rem",
+        padding: "0.375rem 1.5rem",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
