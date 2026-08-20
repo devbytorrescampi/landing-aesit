@@ -405,7 +405,7 @@ a:focus-visible {
   position: relative;
   z-index: 1;
   max-width: 720px;
-  padding-block: 5rem 4rem;
+  padding-block: 2rem 4rem;
 }
 
 .hero__badge {
