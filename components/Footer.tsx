@@ -92,6 +92,15 @@ export default function Footer() {
                   Impulsado por IDEP
                 </a>
               </li>
+              <li>
+                <a
+                  href="https://enteculturaltucuman.gob.ar"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Impulsado por Ente Cultural
+                </a>
+              </li>
             </ul>
           </div>
 
