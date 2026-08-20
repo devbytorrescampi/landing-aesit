@@ -58,7 +58,7 @@ export default function ContactoPage() {
                 </div>
                 <div className="contact-item__text">
                   <strong>Correo electrónico</strong>
-                  <a href="mailto:contacto@aesit.com.ar">contacto@aesit.com.ar</a>
+                  <a href="mailto:contacto@aesit.com.ar" target="_blank" rel="noopener noreferrer">contacto@aesit.com.ar</a>
                 </div>
               </FadeIn>
 
