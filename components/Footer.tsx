@@ -76,7 +76,7 @@ export default function Footer() {
             <h4>Contacto</h4>
             <ul>
               <li>
-                <a href="mailto:contacto@aesit.org.ar">contacto@aesit.org.ar</a>
+                <a href="mailto:contacto@aesit.com.ar">contacto@aesit.com.ar</a>
               </li>
               <li>
                 <span style={{ color: "var(--text-faint)", fontSize: "0.875rem" }}>

@@ -6,7 +6,7 @@ import { Resend } from "resend";
  * Server Action que envía el formulario de contacto por email vía Resend.
  *
  * Para activarlo en producción:
- * 1. Crear una cuenta en https://resend.com y verificar el dominio aesit.org.ar
+ * 1. Crear una cuenta en https://resend.com y verificar el dominio aesit.com.ar
  *    (o el dominio que se use para enviar correos).
  * 2. Generar una API key en Resend y agregarla como variable de entorno:
  *      vercel env add RESEND_API_KEY
@@ -41,9 +41,9 @@ const MOTIVO_LABELS: Record<string, string> = {
 };
 
 // Remitente verificado en Resend. Debe ser un dominio verificado en la cuenta de Resend.
-const FROM_EMAIL = process.env.CONTACT_FROM_EMAIL || "AESIT <contacto@aesit.org.ar>";
+const FROM_EMAIL = process.env.CONTACT_FROM_EMAIL || "AESIT <contacto@aesit.com.ar>";
 // Casilla que recibe las consultas del formulario.
-const TO_EMAIL = process.env.CONTACT_TO_EMAIL || "contacto@aesit.org.ar";
+const TO_EMAIL = process.env.CONTACT_TO_EMAIL || "contacto@aesit.com.ar";
 
 function escapeHtml(value: string) {
   return value
