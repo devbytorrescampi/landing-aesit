@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, FormEvent } from "react";
+import { sendContactEmail } from "@/app/actions/contacto";
 
 interface FormState {
   nombre: string;
@@ -50,6 +51,7 @@ export default function ContactForm() {
   const [errors, setErrors]     = useState<FieldErrors>({});
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted]   = useState(false);
+  const [serverError, setServerError] = useState<string | null>(null);
 
   function validate(): FieldErrors {
     const e: FieldErrors = {};
@@ -75,12 +77,19 @@ export default function ContactForm() {
     }
   }
 
-  function handleSubmit(e: FormEvent) {
+  async function handleSubmit(e: FormEvent) {
     e.preventDefault();
     const errs = validate();
     if (Object.keys(errs).length > 0) { setErrors(errs); return; }
+    setServerError(null);
     setSubmitting(true);
-    setTimeout(() => { setSubmitting(false); setSubmitted(true); }, 1400);
+    const result = await sendContactEmail(form);
+    setSubmitting(false);
+    if (result.ok) {
+      setSubmitted(true);
+    } else {
+      setServerError(result.error);
+    }
   }
 
   if (submitted) {
@@ -196,6 +205,12 @@ export default function ContactForm() {
           />
           <FieldError msg={errors.mensaje} />
         </div>
+
+        {serverError && (
+          <p role="alert" className="cf-error" style={{ marginBottom: "1rem" }}>
+            {serverError}
+          </p>
+        )}
 
         <button type="submit" className="btn btn--primary cf-submit" disabled={submitting}>
           {submitting ? (
