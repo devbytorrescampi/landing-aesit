@@ -22,12 +22,12 @@ export default function BrandFooter({
       style={{
         maxWidth: "64rem",
         margin: "0 auto",
-        padding: "1.25rem 1.5rem",
+        padding: "0.625rem 1.5rem",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        gap: "0.75rem",
-        fontSize: "0.75rem",
+        gap: "0.5rem",
+        fontSize: "0.6875rem",
         color: mutedColor,
         borderTop: `1px solid ${borderColor}`,
       }}
@@ -57,7 +57,7 @@ export default function BrandFooter({
         onMouseOver={(e) => (e.currentTarget.style.opacity = "0.7")}
         onMouseOut={(e) => (e.currentTarget.style.opacity = "1")}
       >
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
           <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
           <circle cx="12" cy="12" r="4.5" />
           <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
@@ -72,7 +72,7 @@ export default function BrandFooter({
         onMouseOver={(e) => (e.currentTarget.style.opacity = "0.7")}
         onMouseOut={(e) => (e.currentTarget.style.opacity = "1")}
       >
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
           <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
           <rect x="2" y="9" width="4" height="12" />
           <circle cx="4" cy="4" r="2" />
