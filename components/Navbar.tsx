@@ -55,6 +55,9 @@ export default function Navbar() {
             <Link href="/socios" className={`nav-link${isActive("/socios") ? " active" : ""}`}>
               Socios
             </Link>
+            <Link href="/expocon-2026" className={`nav-link${isActive("/expocon-2026") ? " active" : ""}`}>
+              Expocon 2026
+            </Link>
             <Link href="/contacto" className={`nav-link${isActive("/contacto") ? " active" : ""}`}>
               Contacto
             </Link>
@@ -80,6 +83,9 @@ export default function Navbar() {
       <nav className={`navbar__mobile${open ? " open" : ""}`} aria-label="Menú mobile">
         <Link href="/socios" className={`nav-link${isActive("/socios") ? " active" : ""}`}>
           Socios
+        </Link>
+        <Link href="/expocon-2026" className={`nav-link${isActive("/expocon-2026") ? " active" : ""}`}>
+          Expocon 2026
         </Link>
         <Link href="/contacto" className={`nav-link${isActive("/contacto") ? " active" : ""}`}>
           Contacto
