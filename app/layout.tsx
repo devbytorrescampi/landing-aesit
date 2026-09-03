@@ -34,6 +34,13 @@ export const metadata: Metadata = {
     "seguridad informática",
     "AESIT",
   ],
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/logo2.png", type: "image/png", media: "(prefers-color-scheme: light)" },
+      { url: "/logo.png", type: "image/png", media: "(prefers-color-scheme: dark)" },
+    ],
+  },
 };
 
 export default function RootLayout({
