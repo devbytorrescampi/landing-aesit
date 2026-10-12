@@ -13,7 +13,7 @@ type BrandFooterProps = {
 export default function BrandFooter({
   name = "TorresCampi Soft",
   url = "https://torrescampisoft.com",
-  instagram = "https://www.instagram.com/torrescampisoft",
+  instagram = "https://www.instagram.com/tcsoft.com.ar/",
   linkedin = "https://ar.linkedin.com/company/torrescampisoft",
   primaryColor = "#e8edfb",
   mutedColor = "#6b7280",
